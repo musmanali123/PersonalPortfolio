@@ -202,7 +202,7 @@ p {
 
 /* Hero Section */
 #hero {
-	background-image: url('https://camo.githubusercontent.com/91c0c50639feb83c9675e648e989b35117171876f126c3af52a522f266f1aeb7/68747470733a2f2f6d69726f2e6d656469756d2e636f6d2f6d61782f313430302f312a4f785437556a4977686b6c4b453864385346796f37672e676966');
+	background-image: url('./img/gif1.gif');
 	background-size: cover;
 	background-position: top center;
 	position: relative;
@@ -407,7 +407,7 @@ p {
 	text-align: center;
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 100px 20px;
+	padding: 50px 20px;
 }
 #about .col-left {
 	width: 250px;
