@@ -71,80 +71,9 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
 
 // ===== CONSULTATION FORM =====
-const MAX_FILE_SIZE = 5 * 1024 * 1024;
-const ALLOWED_TYPES = [
-  'application/pdf',
-  'application/msword',
-  'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-  'application/octet-stream',
-];
-const ALLOWED_EXTENSIONS = ['pdf', 'doc', 'docx'];
 const FORM_ENDPOINT = 'https://formsubmit.co/ajax/usman232429@gmail.com';
-
-let selectedFile = null;
-
-const fileInput = document.getElementById('fileInput');
-const fileList = document.getElementById('fileList');
 const form = document.getElementById('consultationForm');
 const submitBtn = document.getElementById('submitBtn');
-
-fileInput.addEventListener('change', (e) => {
-  const file = e.target.files[0];
-  if (!file) {
-    return;
-  }
-
-  const ext = (file.name.split('.').pop() || '').toLowerCase();
-  const isAllowedByType = ALLOWED_TYPES.includes(file.type);
-  const isAllowedByExtension = ALLOWED_EXTENSIONS.includes(ext);
-
-  if (!isAllowedByType && !isAllowedByExtension) {
-    showToast('Invalid file type', `${file.name} is not allowed. Use PDF, DOC, or DOCX.`, true);
-    fileInput.value = '';
-    selectedFile = null;
-    renderFiles();
-    return;
-  }
-
-  if (file.size > MAX_FILE_SIZE) {
-    showToast('File too large', `${file.name} exceeds 5MB limit.`, true);
-    fileInput.value = '';
-    selectedFile = null;
-    renderFiles();
-    return;
-  }
-
-  selectedFile = file;
-  renderFiles();
-});
-
-function renderFiles() {
-  fileList.innerHTML = '';
-  if (!selectedFile) {
-    return;
-  }
-
-  const chip = document.createElement('span');
-  chip.className = 'file-chip';
-
-  const name = document.createElement('span');
-  name.textContent = selectedFile.name;
-
-  const removeBtn = document.createElement('button');
-  removeBtn.type = 'button';
-  removeBtn.textContent = 'x';
-  removeBtn.addEventListener('click', removeSelectedFile);
-
-  chip.appendChild(name);
-  chip.appendChild(removeBtn);
-  fileList.appendChild(chip);
-}
-
-function removeSelectedFile() {
-  selectedFile = null;
-  fileInput.value = '';
-  renderFiles();
-}
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
@@ -167,7 +96,7 @@ form.addEventListener('submit', async (e) => {
 
     const subject = encodeURIComponent(`Free Consultation Request from ${name}`);
     const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\nPhone: ${phone || 'N/A'}\n\nSummary:\n${summary}\n\n${selectedFile ? 'Attachment selected in form. Please attach it manually before sending.' : 'No attachment provided.'}`
+      `Name: ${name}\nEmail: ${email}\nPhone: ${phone || 'N/A'}\n\nSummary:\n${summary}`
     );
 
     window.location.href = `mailto:usman232429@gmail.com?subject=${subject}&body=${body}`;
@@ -175,8 +104,6 @@ form.addEventListener('submit', async (e) => {
     setTimeout(() => {
       showToast('Email draft opened', 'Please press Send in your email app to deliver this query.');
       form.reset();
-      selectedFile = null;
-      renderFiles();
       submitBtn.disabled = false;
       submitBtn.textContent = 'Send Consultation Request';
     }, 600);
@@ -194,9 +121,6 @@ form.addEventListener('submit', async (e) => {
   formData.append('_subject', `Free Consultation Request from ${name}`);
   formData.append('_captcha', 'false');
   formData.append('_url', window.location.href);
-  if (selectedFile) {
-    formData.append('attachment', selectedFile);
-  }
 
   try {
     const response = await fetch(FORM_ENDPOINT, {
@@ -216,8 +140,6 @@ form.addEventListener('submit', async (e) => {
 
     showToast('Request sent', 'Your consultation request was sent successfully.');
     form.reset();
-    selectedFile = null;
-    renderFiles();
   } catch (error) {
     showToast('Send failed', 'Unable to send right now. Please try again in a moment.', true);
   } finally {
