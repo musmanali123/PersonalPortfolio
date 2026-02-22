@@ -1,270 +1,385 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>M.U.A 👋</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mohammad Usman Ali - Full-Stack Software Engineer delivering secure, scalable web and mobile products." />
+  <title>Mohammad Usman Ali | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <!-- Header -->
-  <section id="header">
-    <div class="header container">
-      <div class="nav-bar">
-        <div class="brand">
-          <a href="#hero">
-            <h1><span>Mohammad </span>Usman <span>A</span>li</h1>
-          </a>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="inner">
+      <a href="#home" class="brand">MOHAMMAD <span class="text-gradient">USMAN ALI</span></a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#hiring">Hiring</a></li>
+        <li><a href="#consultation">Consultation</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburgerBtn">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#stack">Stack</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#hiring">Hiring</a></li>
+      <li><a href="#consultation">Consultation</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero -->
+  <section id="home">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80" alt="" />
+      <div class="overlay"></div>
+    </div>
+    <div class="hero-content fade-in">
+      <p class="subtitle">Hello, I'm</p>
+      <h1>Mohammad <span class="text-gradient">Usman Ali</span></h1>
+      <p class="tagline">Full-Stack Software Engineer building reliable web and mobile products</p>
+      <a href="#projects" class="btn-primary">View Portfolio</a>
+    </div>
+    <div class="scroll-indicator">&#x2193;</div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section-padding">
+    <div class="container">
+      <h2 class="section-title fade-in">My <span class="text-gradient">Services</span></h2>
+      <p class="section-subtitle fade-in">Designing and delivering production-grade software solutions across web, mobile, and cloud with strong engineering standards.</p>
+      <div class="services-grid">
+        <div class="service-card fade-in">
+          <div class="icon">&#x1F310;</div>
+          <h3>Web Development</h3>
+          <p>Creating various types of websites that cater to unique client needs, ensuring an immersive and visually appealing interface.</p>
         </div>
-        <div class="nav-list">
-          <div class="hamburger">
-            <div class="bar"></div>
-          </div>
-          <ul>
-            <li><a href="#hero" data-after="Home">Home</a></li>
-            <li><a href="#services" data-after="Service">Services</a></li>
-            <li><a href="#projects" data-after="Projects">Projects</a></li>
-            <li><a href="#about" data-after="About">About</a></li>
-            <li><a href="#contact" data-after="Contact">Contact</a></li>
-          </ul>
+        <div class="service-card fade-in">
+          <div class="icon">&#x1F4F1;</div>
+          <h3>App Development</h3>
+          <p>Specializing in creating mobile apps that cater to unique client needs, ensuring an immersive and visually stunning experience.</p>
+        </div>
+        <div class="service-card fade-in">
+          <div class="icon">&#x1F517;</div>
+          <h3>Blockchain Dev</h3>
+          <p>Deeply invested in Web 3.0 and blockchain technology, building decentralized applications and smart contracts.</p>
+        </div>
+        <div class="service-card fade-in">
+          <div class="icon">&#x1F4CA;</div>
+          <h3>CMS Solutions</h3>
+          <p>Extensive knowledge about CMS Solutions with graphical representation and content management systems.</p>
         </div>
       </div>
     </div>
   </section>
-  <!-- End Header -->
 
+  <!-- Tech Stack -->
+  <section id="stack" class="section-padding">
+    <div class="container">
+      <h2 class="section-title fade-in">Tech <span class="text-gradient">Stack</span></h2>
+      <p class="section-subtitle fade-in">A comprehensive toolkit spanning frontend, backend, cloud, mobile, blockchain, and AI technologies.</p>
+      <div class="stack-grid">
 
-  <!-- Hero Section  -->
-  <section id="hero">
-    <div class="hero container">
-      <div>
-        <h1>Hello, <span></span></h1>
-        <h1>I'am <span></span></h1>
-        <h1>Mohammad Usman Ali <span></span></h1>
-        <a href="#projects" type="button" class="cta">Portfolio</a>
+        <div class="stack-card fade-in">
+          <h3>Frontend Development</h3>
+          <div class="badges">
+            <span class="badge">HTML5</span><span class="badge">CSS3</span><span class="badge">JavaScript (ES6+)</span><span class="badge">TypeScript</span><span class="badge">React.js</span><span class="badge">Next.js</span><span class="badge">Angular</span><span class="badge">React Native</span><span class="badge">Flutter</span><span class="badge">Bootstrap</span><span class="badge">SCSS / SASS</span><span class="badge">Material UI</span><span class="badge">Responsive Design</span><span class="badge">Figma to UI</span><span class="badge">Adobe XD to UI</span>
+          </div>
+        </div>
+
+        <div class="stack-card fade-in">
+          <h3>Backend Development</h3>
+          <div class="badges">
+            <span class="badge">Node.js</span><span class="badge">NestJS</span><span class="badge">.NET</span><span class="badge">.NET Core</span><span class="badge">ASP.NET MVC</span><span class="badge">Python</span><span class="badge">Django</span><span class="badge">RESTful APIs</span><span class="badge">JWT & OAuth</span>
+          </div>
+        </div>
+
+        <div class="stack-card fade-in">
+          <h3>Databases</h3>
+          <div class="badges">
+            <span class="badge">MongoDB</span><span class="badge">MySQL</span><span class="badge">PostgreSQL</span><span class="badge">Firebase</span>
+          </div>
+        </div>
+
+        <div class="stack-card fade-in">
+          <h3>Cloud & DevOps</h3>
+          <div class="badges">
+            <span class="badge">AWS (EC2, S3, Lambda, RDS)</span><span class="badge">Microsoft Azure</span><span class="badge">Docker</span><span class="badge">Server Deployment</span>
+          </div>
+        </div>
+
+        <div class="stack-card fade-in">
+          <h3>Mobile & Cross-Platform</h3>
+          <div class="badges">
+            <span class="badge">React Native</span><span class="badge">Flutter</span><span class="badge">API Integration</span><span class="badge">Performance Optimization</span>
+          </div>
+        </div>
+
+        <div class="stack-card fade-in">
+          <h3>Blockchain & Web3</h3>
+          <div class="badges">
+            <span class="badge">Blockchain Apps</span><span class="badge">Solidity</span><span class="badge">Smart Contracts</span><span class="badge">Web3.js / Ethers.js</span>
+          </div>
+        </div>
+
+        <div class="stack-card fade-in">
+          <h3>AI & Advanced Tech</h3>
+          <div class="badges">
+            <span class="badge">AI Integration</span><span class="badge">Automation & Intelligent Systems</span><span class="badge">AI in Web & Mobile</span>
+          </div>
+        </div>
+
+        <div class="stack-card fade-in">
+          <h3>Practices & Tools</h3>
+          <div class="badges">
+            <span class="badge">Git / GitHub / GitLab</span><span class="badge">Agile & Scrum</span><span class="badge">Code Optimization</span><span class="badge">Testing & Debugging</span><span class="badge">Security Best Practices</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
-  <!-- End Hero Section  -->
 
-  <!-- Service Section -->
-  <section id="services">
-    <div class="services container">
-      <div class="service-top">
-        <h1 class="section-title">Serv<span>i</span>ces</h1>
-        <p>Welcome to my portfolio! As a passionate and skilled developer, I specialize in leveraging the MERN stack to
-          craft dynamic and robust web & app applications. With a focus on delivering
-          seamless user experiences and efficient operations, I strive to create cutting-edge solutions that
-          resonate with modern web & app development trends!</p>
-      </div>
-      <div class="service-bottom">
-        <div class="service-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png" /></div>
-          <h2>Web Dev</h2>
-          <p>I specialize in creating various types of websites that cater to unique client needs, ensuring an immersive
-            and visually appealing interface.</p>
+  <!-- Projects -->
+  <section id="projects" class="section-padding">
+    <div class="container">
+      <h2 class="section-title fade-in">Recent <span class="text-gradient">Projects</span></h2>
+      <div class="projects-grid">
+
+        <div class="project-card fade-in">
+          <div class="thumb">
+            <img src="https://musmanali123.github.io/PersonalPortfolio/img/proj1.PNG" alt="Versio" />
+            <div class="fade"></div>
+          </div>
+          <div class="info">
+            <div class="top-row">
+              <h3>Versio</h3>
+              <a href="https://www.versio.nl/" target="_blank" class="link-icon">&#8599;</a>
+            </div>
+            <span class="tag">Hosting Provider E-commerce</span>
+            <p>Hosting Provider E-commerce Website that provides Web-hosting to customers. Totally used in Germany.</p>
+          </div>
         </div>
-        <div class="service-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png" /></div>
-          <h2>App Dev</h2>
-          <p>I also specialize in creating various types of Mobile Apps that cater to unique client needs, ensuring an
-            immersive
-            and visually bes.</p>
+
+        <div class="project-card fade-in">
+          <div class="thumb">
+            <img src="https://musmanali123.github.io/PersonalPortfolio/img/proj2.PNG" alt="InApp Solution" />
+            <div class="fade"></div>
+          </div>
+          <div class="info">
+            <div class="top-row">
+              <h3>InApp Solution</h3>
+              <a href="https://www.inappsolutions.com/" target="_blank" class="link-icon">&#8599;</a>
+            </div>
+            <span class="tag">Software House Website</span>
+            <p>A Software house in Karachi. Helped with the website by creating new UI design with other customizations.</p>
+          </div>
         </div>
-        <div class="service-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png" /></div>
-          <h2>Blockchain Dev</h2>
-          <p> In addition to creating diverse types of web-apps, I am also deeply invested in the exciting realms of Web
-            3.0 and blockchain technology.</p>
+
+        <div class="project-card fade-in">
+          <div class="thumb">
+            <img src="https://musmanali123.github.io/PersonalPortfolio/img/proj6.PNG" alt="Superrior Crane App" />
+            <div class="fade"></div>
+          </div>
+          <div class="info">
+            <div class="top-row">
+              <h3>Superrior Crane App</h3>
+            </div>
+            <span class="tag">MVP Product</span>
+            <p>An MVP app which contains all daily and monthly data of their consumer. Users can track solutions and jobs.</p>
+          </div>
         </div>
-        <div class="service-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png" /></div>
-          <h2>CMS Solutions</h2>
-          <p>In addition to creating diverse CMS Solutions, I also have extensive kowledge about CMS Solutions with
-            graphical representation.</p>
+
+        <div class="project-card fade-in">
+          <div class="thumb">
+            <img src="https://musmanali123.github.io/PersonalPortfolio/img/proj4.PNG" alt="Verime Namibia" />
+            <div class="fade"></div>
+          </div>
+          <div class="info">
+            <div class="top-row">
+              <h3>Verime Namibia</h3>
+              <a href="https://play.google.com/store/apps/details?id=com.verime" target="_blank" class="link-icon">&#8599;</a>
+            </div>
+            <span class="tag">Digital Wallet App</span>
+            <p>App concept to provide digital wallet where users can request related documentation with one click.</p>
+          </div>
         </div>
+
+        <div class="project-card fade-in">
+          <div class="thumb">
+            <img src="https://musmanali123.github.io/PersonalPortfolio/img/proj5.PNG" alt="Superrior Crane Web" />
+            <div class="fade"></div>
+          </div>
+          <div class="info">
+            <div class="top-row">
+              <h3>Superrior Crane Web</h3>
+              <a href="https://test.visech.com/" target="_blank" class="link-icon">&#8599;</a>
+            </div>
+            <span class="tag">Job Tracking Platform</span>
+            <p>Company website for tracking jobs and checking related details according to each job.</p>
+          </div>
+        </div>
+
+        <div class="project-card fade-in">
+          <div class="thumb">
+            <img src="https://musmanali123.github.io/PersonalPortfolio/img/proj7.PNG" alt="Relyon Housekeeping" />
+            <div class="fade"></div>
+          </div>
+          <div class="info">
+            <div class="top-row">
+              <h3>Relyon Housekeeping</h3>
+              <a href="https://play.google.com/store/apps/details?id=com.relyon" target="_blank" class="link-icon">&#8599;</a>
+            </div>
+            <span class="tag">Service Platform</span>
+            <p>U.K based organization providing housekeeping services digitally.</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
-  <!-- End Service Section -->
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <div class="projects container">
-      <div class="projects-header">
-        <h1 class="section-title">Recent <span>Projects</span></h1>
-      </div>
-      <div class="all-projects">
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Versio</h1>
-            <h2>
-              <a style="color: aliceblue;" href="https://www.versio.nl"  target="_blank">
-                Check This Out
-              </a>
-            </h2>
-            <p>Hosting Provider E-commerce Website that providesWeb-hosting to the customer for their product. Totally
-              used in Germany</p>
-          </div>
-          <div class="project-img">
-            <img src="./img/proj1.PNG" alt="img">
-          </div>
-        </div>
-        <div class="project-item">
-          <div class="project-info">
-            <h1>InApp Solution</h1>
-            <h2>
-              <a style="color: aliceblue;" href="https://www.inappsolutions.com/"  target="_blank">
-                Check This Out
-              </a>
-            </h2>
-            <p>A Software house in karachi, I helped in this by webiste by making his new UI design with other
-              customizations!</p>
-          </div>
-          <div class="project-img">
-            <img src="./img/proj2.PNG" alt="img">
-          </div>
-        </div>
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Superrior Crane App</h1>
-            <h2>MVP Product</h2>
-            <p>It's an MVP app which contani all Dialy and monthly data of thier consumer, in this User can track thier
-              solutions and its jobs </p>
-          </div>
-          <div class="project-img">
-            <img src="./img/proj6.PNG" alt="img">
-          </div>
-        </div>
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Verime Nambia</h1>
-            <h2>
-              <a style="color: aliceblue;" href="https://play.google.com/store/apps/details?id=com.verime"  target="_blank">
-                Check This Out
-              </a>
-            </h2>
-            <p>This App's Concept to provide digital Wallet to it's user who can request the related documentation as
-              one click!</p>
-          </div>
-          <div class="project-img">
-            <img src="./img/proj4.PNG" alt="img">
-          </div>
-        </div>
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Superrior Crane Web</h1>
-            <h2>
-              <a style="color: aliceblue;" href="https://test.visech.com/"  target="_blank">
-                Check This Out
-              </a>
-            </h2>
-            <p> Comapny Website for tracking the jobs and their and check the related detail accrodig to related Job!
-            </p>
-          </div>
-          <div class="project-img">
-            <img src="./img/proj5.PNG" alt="img">
-          </div>
-        </div>
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Relyon Housekeeping</h1>
-            <h2>
-              <a style="color: aliceblue;" href="https://play.google.com/store/apps/details?id=com.relyon"  target="_blank">
-                Check This Out
-              </a>
-            </h2>
-            <p> U.K Based Organization to provide a Housekeeping services digitally!
-            </p>
-          </div>
-          <div class="project-img">
-            <img src="./img/proj7.PNG" alt="img">
-          </div>
-        </div>
-      </div>
-      </div>
-  </section>
-  <!-- End Projects Section -->
-
-  <!-- About Section -->
-  <section id="about">
-    <div class="about container">
-      <div class="col-left">
+  <!-- About -->
+  <section id="about" class="section-padding">
+    <div class="container">
+      <div class="about-grid fade-in">
         <div class="about-img">
-          <img src="./img/myPng.png" alt="img">
+          <img src="https://musmanali123.github.io/PersonalPortfolio/img/myPng.png" alt="Mohammad Usman Ali" />
         </div>
-      </div>
-      <div class="col-right">
-        <h1 class="section-title">About <span>me</span></h1>
-        <h2>MERN Stack Developer</h2>
-        <p> am a <b>MERN Stack developer</b> from Pakistan with extensive knowledge of creating new designs for your business
-          that provide a visually appealing representation in the world..
-          . A MERN stack development is a crucial part of modern web & app development, specializing in creating
-          dynamic and efficient web applications using the MERN stack technologies. They play a vital role in
-          designing, developing, and optimizing web applications to provide seamless user experiences! </p>
-        <a href="Usman_Cv.docx"  download class="cta">Download Resume</a>
-      </div>
-    </div>
-  </section>
-  <!-- End About Section -->
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <div class="contact container">
-      <div>
-        <h1 class="section-title">Contact <span>info</span></h1>
-      </div>
-      <div class="contact-items">
-        <div class="contact-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/phone.png" /></div>
-          <div class="contact-info">
-            <h1>Phone</h1>
-            <h2><a style="color: black;" href="tel:0308-2429235">0308-2429235</a></h2>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/new-post.png" /></div>
-          <div class="contact-info">
-            <h1>Email</h1>
-            <h2>info@gmail.com</h2>
-            <h2><a style="color: black;" href="usman232429@gmail.com">usman232429@gmail.com</a></h2>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/map-marker.png" /></div>
-          <div class="contact-info">
-            <h1>Address</h1>
-            <h2>Karcahi, Pakistan</h2>
-          </div>
+        <div class="about-text">
+          <h2 class="section-title" style="text-align:left;">About <span class="text-gradient">Me</span></h2>
+          <p class="role">Full-Stack Software Engineer</p>
+          <p>I am a software engineer from Pakistan focused on building scalable digital products for startups and established businesses.</p>
+          <p>I specialize in end-to-end development, from architecture and API design to responsive frontends, deployment, and long-term maintainability.</p>
+          <a href="https://musmanali123.github.io/PersonalPortfolio/Usman_Cv.docx" class="btn-primary">Download Resume</a>
         </div>
       </div>
     </div>
   </section>
-  <!-- End Contact Section -->
 
-
-  <!-- Footer -->
-  <section id="footer">
-    <div class="footer container">
-      <div class="brand">
-        <h1><span>M</span>ohammad <span>U</span>sman <span>A</span><span>li</span></h1>
-      </div>
-      <h2>A Complete Solution Your Bussiness</h2>
-      <div class="social-icon">
-        <div class="social-item">
-          <a  target="_blank" href="https://github.com/musmanali123"><img src="https://img.icons8.com/bubbles/100/000000/github.png" /></a>
+  <!-- Hiring & Project Management -->
+  <section id="hiring" class="section-padding">
+    <div class="container">
+      <h2 class="section-title fade-in">Hiring & <span class="text-gradient">Project Management</span></h2>
+      <p class="section-subtitle fade-in">Looking to build or scale your development team? I offer dedicated hiring and full project management services.</p>
+      <div class="hiring-grid">
+        <div class="hiring-card fade-in">
+          <div class="icon">&#x1F465;</div>
+          <h3>Dedicated Team Hiring</h3>
+          <p>Hire a skilled development team tailored to your project needs - frontend, backend, full-stack, or specialized roles.</p>
         </div>
-        <div class="social-item">
-          <a  target="_blank" href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile"><img src="https://img.icons8.com/bubbles/100/000000/linkedin.png" /></a>
+        <div class="hiring-card fade-in">
+          <div class="icon">&#x1F4BC;</div>
+          <h3>Project Management</h3>
+          <p>End-to-end project management using Agile & Scrum methodologies, ensuring timely delivery and transparent communication.</p>
+        </div>
+        <div class="hiring-card fade-in">
+          <div class="icon">&#x23F0;</div>
+          <h3>Flexible Engagement</h3>
+          <p>Choose from hourly, monthly, or project-based engagement models that fit your timeline and budget.</p>
+        </div>
+        <div class="hiring-card fade-in">
+          <div class="icon">&#x1F6E1;</div>
+          <h3>Quality Assurance</h3>
+          <p>Rigorous code reviews, testing, and security best practices baked into every stage of development.</p>
         </div>
       </div>
-      <p>Copyright © 2023. All rights reserved</p>
     </div>
   </section>
-  <!-- End Footer -->
-  <script src="./app.js"></script>
+
+  <!-- Consultation Form -->
+  <section id="consultation" class="section-padding">
+    <div class="container">
+      <h2 class="section-title fade-in">Free <span class="text-gradient">Consultation</span></h2>
+      <p class="section-subtitle fade-in">Have a project in mind? Share your details and one supporting document, and I will reply within 24 hours.</p>
+
+      <form class="consultation-form fade-in" id="consultationForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required maxlength="100" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required maxlength="255" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="+92 300 1234567" maxlength="20" />
+        </div>
+        <div class="form-group">
+          <label for="summary">Project Summary *</label>
+          <textarea id="summary" name="summary" placeholder="Briefly describe your project, goals, and timeline..." required maxlength="2000" rows="5"></textarea>
+        </div>
+
+        <div class="file-upload-area">
+          <label>Attachment (optional - max 1 document, 5MB)</label><br/><br/>
+          <label class="file-label" for="fileInput">Choose Document
+            <input type="file" id="fileInput" hidden accept=".pdf,.doc,.docx" />
+          </label>
+          <span class="file-hint">PDF, DOC, DOCX</span>
+          <div class="file-list" id="fileList"></div>
+        </div>
+
+        <button type="submit" class="btn-submit" id="submitBtn">Send Consultation Request</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section-padding">
+    <div class="container">
+      <h2 class="section-title fade-in">Contact <span class="text-gradient">Info</span></h2>
+      <div class="contact-grid">
+        <div class="contact-card fade-in">
+          <div class="icon">&#x1F4DE;</div>
+          <h3>Phone</h3>
+          <a href="tel:03082429235">0308-2429235</a>
+        </div>
+        <div class="contact-card fade-in">
+          <div class="icon">&#x2709;</div>
+          <h3>Email</h3>
+          <a href="mailto:usman232429@gmail.com">usman232429@gmail.com</a>
+        </div>
+        <div class="contact-card fade-in">
+          <div class="icon">&#x1F4CD;</div>
+          <h3>Address</h3>
+          <p>Pakistan</p>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>&copy; 2026 Mohammad Usman Ali. All rights reserved.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <div class="toast-title"></div>
+    <div class="toast-desc"></div>
+  </div>
+
+  <script src="app.js"></script>
 </body>
-
 </html>
+
+
+
+
