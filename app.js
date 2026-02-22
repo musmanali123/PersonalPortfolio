@@ -76,7 +76,9 @@ const ALLOWED_TYPES = [
   'application/pdf',
   'application/msword',
   'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+  'application/octet-stream',
 ];
+const ALLOWED_EXTENSIONS = ['pdf', 'doc', 'docx'];
 const FORM_ENDPOINT = 'https://formsubmit.co/ajax/usman232429@gmail.com';
 
 let selectedFile = null;
@@ -92,7 +94,11 @@ fileInput.addEventListener('change', (e) => {
     return;
   }
 
-  if (!ALLOWED_TYPES.includes(file.type)) {
+  const ext = (file.name.split('.').pop() || '').toLowerCase();
+  const isAllowedByType = ALLOWED_TYPES.includes(file.type);
+  const isAllowedByExtension = ALLOWED_EXTENSIONS.includes(ext);
+
+  if (!isAllowedByType && !isAllowedByExtension) {
     showToast('Invalid file type', `${file.name} is not allowed. Use PDF, DOC, or DOCX.`, true);
     fileInput.value = '';
     selectedFile = null;
@@ -187,6 +193,7 @@ form.addEventListener('submit', async (e) => {
   formData.append('summary', summary);
   formData.append('_subject', `Free Consultation Request from ${name}`);
   formData.append('_captcha', 'false');
+  formData.append('_url', window.location.href);
   if (selectedFile) {
     formData.append('attachment', selectedFile);
   }
